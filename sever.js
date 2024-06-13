@@ -24,7 +24,6 @@ app.get('/course/:id', (req, res) => {
 });
 
 app.get('/search', (req, res) => {
-    // console.log('query', req.query.q);
     const query = req.query.q.toLowerCase();
     // console.log('query', query);
     const results = courses.filter(course => course.topic.toLowerCase().includes(query));
