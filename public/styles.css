@@ -24,6 +24,11 @@
     --dark-heart-color: #DC143C;
 }
 
+.layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 body {
     background-color: var(--bg-body);
     color: var(--body-text);
@@ -54,6 +59,16 @@ header nav ul {
 
 header nav ul li {
     margin-right: 20px;
+}
+
+header nav ul button{
+    background-color:  white;
+    color: var(--brand-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
 
 header nav ul li a {
@@ -122,6 +137,15 @@ header nav ul li a {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    flex-grow: 1;
+    max-width: 1440px;
 }
 
 .content .container h3 {
@@ -193,6 +217,7 @@ footer p {
 
 .dark-mode .search-container .search-bar  {
     background-color: var(--dark-bg-default);
+    color: var(--dark-body-text);
 }
 
 .dark-mode .sort, .dark-mode .filter {
@@ -202,6 +227,11 @@ footer p {
 
 
 .dark-mode header nav ul li a {
+    color: var(--dark-brand-primary);
+}
+
+.dark-mode header nav ul button {
+    background-color: var(--dark-bg-default);
     color: var(--dark-brand-primary);
 }
 
