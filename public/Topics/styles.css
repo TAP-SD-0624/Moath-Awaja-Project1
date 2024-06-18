@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+:root {
+  --brand-primary: #0768AC;
+  --brand-secondary: #03C180;
+  --bg-default: #FFFFFF;
+  --bg-body: #F0F9FF;
+  --lines-color: #DDDDDD;
+  --body-text: #333333;
+  --heart-color: #DC143C;
+
+  /* Dark mode */
+  --dark-brand-primary: #0768AC;
+  --dark-brand-secondary: #03C180;
+  --dark-bg-default: #1A1A1A;
+  --dark-bg-body: #282828;
+  --dark-lines-color: #000000;
+  --dark-body-text: #EDEDED;
+  --dark-heart-color: #DC143C;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--body-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--bg-default);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--lines-color);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin-left: 20px;
+  color: var(--brand-primary);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul button {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+.moonIcon, .heartIcon {
+  width: 24px;
+  height: 24px;
+}
+
+#dark-mode-toggle, #fav-button {
+  display: flex;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+}
+
+.triangle2 {
+  width: 100%;
+  height: 50px;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  background: var(--brand-primary);
+  position: absolute;
+}
+
+.triangle1 {
+  width: 100%;
+  height: 50px;
+  clip-path: polygon(0 0, 100% 97%, 100% 0);
+  background: var(--brand-secondary);
+  position: absolute;
+}
+
+.welcomeBox {
+  color: var(--brand-secondary);
+  padding: 40px 0;
+  text-align: center;
+  
+}
+
+.container h1{
+padding-right: 10rem;}
+
+.welcomeBox .container p {
+  color: var(--body-text);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.relativeContainer {
+  position: relative;
+  min-width: 250px;
+}
+
+.stars {
+  color: #FFD700;
+}
+
+.topic {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 0 14px 28px var(--lines-color) (0, 0, 0, 0.08),
+    0 10px 10px var(--lines-color) (0, 0, 0, 0.05);
+}
+
+.topicImg {
+  width: 100%;
+  height: 128px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topicImg img {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding-top: 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.subTopicsContainer {
+  background-color: var(--bg-body);
+}
+
+.details,
+.subTopicsContainer {
+  display: flex;
+  justify-content: center;
+  padding-block: 24px;
+  gap: 2rem;
+}
+
+.relativeContainer {
+  background-color: transparent;
+}
+
+.details {
+  width: 300vh;
+  background-color: #333333;
+  gap: 1rem;
+  position: relative;
+}
+
+h4 {
+  color: var(--brand-secondary);
+  background-color: inherit;
+}
+
+.title,
+.detailsP {
+  color: white;
+  background-color: inherit;
+}
+
+.detailsDiv,
+.subTopicsDiv {
+  max-width: 535px;
+}
+
+.detailsDiv {
+  background-color: inherit;
+  max-width: 535px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.favInfo-h5 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 10px;
+  background-color: white;
+  color: black;
+}
+
+.favInfo-h5 h5 {
+  background-color: white;
+  color: black;
+}
+
+.favInfo-h5 a {
+  background-color: white;
+}
+
+.favoriteDiv {
+  border: 1px solid #dddddd;
+  padding: 16px;
+  align-items: center;
+  background-color: white;
+}
+
+.favoriteDiv-P {
+  font-size: 0.8rem;
+  color: black;
+}
+
+.favoriteInformationDiv {
+  background-color: white;
+  padding: 16px;
+}
+
+.addToFavoriteDiv {
+  background-color: var(--brand-secondary);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.addToFavoriteBtn {
+  color: rgb(255, 255, 255);
+  background-color: inherit;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.favHeart {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.addToFavoriteBottom {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.subTopicsDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--lines-color);
+}
+
+.subTopic {
+  padding: 15px;
+  width: 100%;
+  border-bottom: 1px solid var(--lines-color);
+  border-radius: 8px;
+}
+
+.subTopic button {
+  background-color: var(--bg-body);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.subTopic span {
+  color: var(--body-text);
+  border: none;
+}
+
+.subTopicLastDiv {
+  padding: 15px;
+  width: 100%;
+}
+
+.subTopicsH4 {
+  color: var(--body-text);
+  background-color: var(--bg-default);
+}
+
+.checkMark {
+  width: 24px;
+  height: 24px;
+  color: var(--brand-secondary);
+}
+
+footer {
+  background-color: var(--bg-default);
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid var(--lines-color);
+}
+
+footer p {
+  color: var(--body-text);
+}
+
+/* Dark mode */
+.darkMode {
+  --bg-body: var(--dark-bg-body);
+  --bg-default: var(--dark-bg-default);
+  --body-text: var(--dark-body-text);
+  --lines-color: var(--dark-lines-color);
+}
+
+.darkMode #dark-mode-toggle, .darkMode #fav-button {
+  background-color: var(--dark-bg-default);
+  color: white;
+  border-color: black;
+}
+
+.darkMode header {
+  background-color: var(--dark-bg-default);
+  border-bottom-color: var(--dark-lines-color);
+}
+
+.darkMode header h1 {
+  color: var(--dark-brand-primary);
+}
+
+.darkMode .welcomeBox .container p {
+  color: var(--dark-body-text);
+}
+
+.darkMode header nav ul li a {
+  color: var(--dark-brand-primary);
+}
+
+.darkMode header nav ul button {
+  background-color: var(--dark-bg-default);
+  color: var(--dark-brand-primary);
+}
+
+.darkMode .subTopicsDiv {
+  background-color: #222020;
+}
+
+.darkMode .subTopic button {
+  background-color: #222020;
+}
+
+.darkMode footer {
+  background-color: var(--dark-bg-body);
+  border-top-color: var(--dark-lines-color);
+}
+
+.darkMode footer p {
+  color: var(--dark-body-text);
+}

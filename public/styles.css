@@ -24,11 +24,12 @@
     --dark-heart-color: #DC143C;
 }
 
-.layout{
+.layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
 body {
     background-color: var(--bg-body);
     color: var(--body-text);
@@ -52,6 +53,7 @@ header h1 {
     color: var(--brand-primary);
 }
 
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -61,9 +63,9 @@ header nav ul li {
     margin-right: 20px;
 }
 
-header nav ul button{
-    background-color:  white;
-    color: var(--brand-primary);
+header nav ul button {
+    background-color: white;
+    color: black;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -76,7 +78,25 @@ header nav ul li a {
     color: var(--brand-primary);
 }
 
-.triangle-2 {
+.moonIcon,
+.heartIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#dark-mode-toggle,
+#fav-button {
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.triangle2 {
     width: 100%;
     height: 50px;
     clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -84,8 +104,7 @@ header nav ul li a {
     position: absolute;
 }
 
-
-.triangle-1 {
+.triangle1 {
     width: 100%;
     height: 50px;
     clip-path: polygon(0 0, 100% 97%, 100% 0);
@@ -93,12 +112,20 @@ header nav ul li a {
     position: absolute;
 }
 
-.welcome-box {
+.welcomeBox {
     color: var(--brand-secondary);
     padding: 40px 0;
     text-align: center;
+
 }
 
+.container h1 {
+    padding-right: 8.9rem;
+}
+
+.welcomeBox .container p {
+    color: var(--body-text);
+}
 
 .search-container {
     display: flex;
@@ -124,7 +151,8 @@ header nav ul li a {
     gap: 10px;
 }
 
-.sort, .filter {
+.sort,
+.filter {
     border: none;
     background-color: #f0f0f0;
     padding: 10px;
@@ -132,13 +160,15 @@ header nav ul li a {
     border-radius: 5px;
     outline: none;
 }
+
 .flex {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
-main{
+
+main {
     display: flex;
     justify-content: center;
 }
@@ -152,6 +182,7 @@ main{
     padding: 0 50px;
     text-align: start;
 }
+
 .card {
     background-color: var(--bg-default);
     border-radius: 10px;
@@ -159,6 +190,10 @@ main{
     overflow: hidden;
     text-align: center;
     width: 200px;
+}
+
+.card-content .stars {
+    color: #FFD700;
 }
 
 .card img {
@@ -176,6 +211,11 @@ main{
 
 .card-content p {
     color: #888;
+}
+
+.testLink {
+    text-decoration: none;
+    color: var(--dark-lines-color);
 }
 
 footer {
@@ -215,12 +255,13 @@ footer p {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-.dark-mode .search-container .search-bar  {
+.dark-mode .search-container .search-bar {
     background-color: var(--dark-bg-default);
     color: var(--dark-body-text);
 }
 
-.dark-mode .sort, .dark-mode .filter {
+.dark-mode .sort,
+.dark-mode .filter {
     background-color: var(--dark-bg-default);
     color: var(--dark-body-text);
 }
@@ -233,6 +274,21 @@ footer p {
 .dark-mode header nav ul button {
     background-color: var(--dark-bg-default);
     color: var(--dark-brand-primary);
+}
+
+.dark-mode #dark-mode-toggle,
+.dark-mode #fav-button {
+    background-color: var(--dark-bg-default);
+    border: 1px solid var(--dark-lines-color);
+    color: var(--dark-body-text);
+}
+
+.darkMode .welcomeBox .container p {
+    color: var(--dark-body-text);
+}
+
+.dark-mode .testLink {
+    color: white;
 }
 
 .dark-mode .card {

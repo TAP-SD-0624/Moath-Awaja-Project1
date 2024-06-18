@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Topic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <div class="container">
+                <h1> Web Topics </h1>
+
+                <nav>
+                    <ul class="navList">
+                        <li>
+                            <button id="dark-mode-toggle">
+                                <ion-icon class="moonIcon" name="moon-outline"></ion-icon>
+                                Dark Mode
+                            </button>
+                        </li>
+                        <li>
+                            <button id="fav-button">
+                                <ion-icon class="heartIcon" name="heart-outline" size="large"></ion-icon>
+                                Favorites
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="triangleContainer">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+        </div>
+        <section class="welcomeBox">
+            <div class="container">
+                <h1>Welcome to our website!</h1>
+                <p>We have a new design that's fresh, modern, and easy to use.</p>
+            </div>
+        </section>
+        <main>
+            <div class="main">
+                <div class="details">
+                    <div class="detailsDiv">
+                        <div>
+                            <h4>Web Development Languages</h4>
+                            <h3 class="title">HTML</h3>
+                            <p class="stars">★★★★☆</p>
+                        </div>
+                        <p class="detailsP">
+                            HTML (Hypertext Markup Language) is the standard markup language
+                            for creating web pages and other information that can be
+                            displayed in a web browser. It provides a structure for content
+                            and defines how it should be displayed on a web page, including
+                            text, images, and multimedia. HTML is essential for creating
+                            static web pages and is a foundational technology for the World
+                            Wide Web.
+                        </p>
+                    </div>
+                    <div class="relativeContainer">
+                        <div class="topic">
+                            <div class="topicImg">
+                                <img src="../../Logos/html.png" alt="html" />
+                            </div>
+                            <div class="favoriteInformationDiv">
+                                <div class="favInfo-h5">
+                                    <div> <b>HTML</b> by: <a href="#">Sarah Smith</a></div>
+                                </div>
+                                <div class="favoriteDiv">
+                                    <p class="favoriteDiv-P">Interested about this topic?</p>
+                                    <div class="addToFavoriteDiv">
+                                        <button class="addToFavoriteBtn">Add to Favorites </button>
+                                        <ion-icon class="favHeart" name="heart-outline" size="large"></ion-icon>
+                                    </div>
+                                    <p class="addToFavoriteBottom">Unlimited Credits</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subTopicsContainer">
+                    <div class="subTopicsDiv">
+                        <div class="subTopic">
+                            <h4 class="subTopicsH4">HTML Sub Topics</h4>
+                        </div>
+                        <div class="subTopic">
+                            <button class="flex gab btn">
+                                <ion-icon class="checkMark" name="checkmark-circle-outline"></ion-icon>
+                                <span>HTML syntax and structure</span>
+                            </button>
+                        </div>
+                        <div class="subTopic">
+                            <button class="flex gab btn">
+                                <ion-icon class="checkMark" name="checkmark-circle-outline"></ion-icon>
+                                <span>HTML elements and attributes</span>
+                            </button>
+                        </div>
+                        <div class="subTopic">
+                            <button class="flex gab btn">
+                                <ion-icon class="checkMark" name="checkmark-circle-outline"></ion-icon>
+                                <span>HTML forms and input elements</span>
+                            </button>
+                        </div>
+                        <div class="subTopic">
+                            <button class="flex gab btn">
+                                <ion-icon class="checkMark" name="checkmark-circle-outline"></ion-icon>
+                                <span>HTML tables and lists</span>
+                            </button>
+                        </div>
+                        <div class="subTopic">
+                            <button class="flex gab btn">
+                                <ion-icon class="checkMark" name="checkmark-circle-outline"></ion-icon>
+                                <span>HTML multimedia elements (audio, video, images)</span>
+                            </button>
+                        </div>
+                        <div class="subTopic">
+                            <button class="flex gab btn">
+                                <ion-icon class="checkMark" name="checkmark-circle-outline"></ion-icon>
+                                <span>HTML accessibility and semantic markup</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relativeContainer"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p>Developed with ❤️, by Moath © 2024</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('darkMode');
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
