@@ -14,7 +14,12 @@ function createCard(item) {
     cardContent.classList.add('card-content');
 
     const h4 = document.createElement('h4');
-    h4.textContent = `${item.category} ${item.topic}`;
+    h4.textContent = `${item.category} `;   
+    
+    const span = document.createElement('span');
+    span.textContent = item.topic;   
+    
+    h4.appendChild(span);  
 
     const author = document.createElement('p');
     author.textContent = `Author: ${item.name}`;

@@ -222,7 +222,14 @@ main {
 
 .card-content h4 {
     margin-bottom: 10px;
+    font-weight: 100;
+
 }
+.card-content h4 span {
+    font-weight: 600;
+
+}
+
 
 .card-content p {
     color: #888;
